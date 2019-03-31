@@ -36,7 +36,6 @@ export function formsInit() {
             let request  = new XMLHttpRequest(),
                 formData = new FormData(form);
 
-            console.log(formData);
             request.open('POST', 'server.php');
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             request.send(formData);
