@@ -1,6 +1,6 @@
 export function popupWindow() {
-    let   popup         = document.querySelector('.popup_engineer');
-    const popupCloseBtn = document.querySelector('#close'),
+    const popup         = document.querySelector('.popup_engineer'),
+          popupCloseBtn = document.querySelector('#close_popup_engineer'),
           popupOpenBtn  = document.querySelector('.popup_engineer_btn');   
 
     popup.addEventListener('click', function(event){
