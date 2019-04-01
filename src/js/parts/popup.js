@@ -14,4 +14,8 @@ export function popup() {
             popup.style.display = 'block';
         });
     }
+
+    setTimeout(function(){
+        popup.style.display = 'block';
+    }, 60000);
 }
