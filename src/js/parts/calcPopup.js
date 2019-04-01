@@ -6,8 +6,21 @@ export function calcPopup() {
     function calcTabs() {
         const balconsMini = document.querySelectorAll('.balcons_mini'),
               balconsBig  = document.querySelectorAll('.balcons_big'),
-              nextCalc    = document.querySelector('.popup_calc_button');
-
+              nextCalc    = document.querySelector('.popup_calc_button'),
+              inputs      = document.querySelectorAll('.input_calc');
+         let oldInputs    = [inputs[0].value, inputs[1].value];
+        
+        inputs.forEach(function(item, i) {
+            item.addEventListener('keyup', function(){
+                if (/[\D]/.test(this.value)) {
+                    this.value = oldInputs[i];
+                    oldInputs[i] = this.value;
+                } else {
+                    oldInputs[i] = this.value;
+                }
+            });
+        });
+        
         balconsMini.forEach(function(item, i){
             item.addEventListener('click', function(event){
                 event.preventDefault();

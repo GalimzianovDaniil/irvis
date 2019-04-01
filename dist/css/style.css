@@ -27,6 +27,20 @@ body {
     opacity: 0;
   }
 }
+
+.big_photo {
+  display: block;
+  margin: auto;
+  margin-top: 15vh;
+}
+.wrap_img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 .balcons_mini_active{
   transform: scale(1.1, 1.3);
 }

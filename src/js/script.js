@@ -12,6 +12,7 @@ import {formsInit}      from './parts/formsInit';
 import {tabsGlazzing}   from './parts/tabsGlazzing';
 import {calcPopup}      from './parts/calcPopup';
 import {tabsDecoration} from './parts/tabsDecoration';
+import {zoomImg}        from './parts/zoomImg';
 
 window.addEventListener('DOMContentLoaded', function(){
     window.globalObj = {};
@@ -21,4 +22,5 @@ window.addEventListener('DOMContentLoaded', function(){
     tabsGlazzing();
     calcPopup();
     tabsDecoration();
+    zoomImg();
 });
