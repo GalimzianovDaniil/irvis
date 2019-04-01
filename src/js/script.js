@@ -13,6 +13,7 @@ import {tabsGlazzing}   from './parts/tabsGlazzing';
 import {calcPopup}      from './parts/calcPopup';
 import {tabsDecoration} from './parts/tabsDecoration';
 import {zoomImg}        from './parts/zoomImg';
+import {timer}          from './parts/timer';
 
 window.addEventListener('DOMContentLoaded', function(){
     window.globalObj = {};
@@ -23,4 +24,5 @@ window.addEventListener('DOMContentLoaded', function(){
     calcPopup();
     tabsDecoration();
     zoomImg();
+    timer();
 });
