@@ -132,7 +132,7 @@
         </div>
 
         <!-- Slider -->
-        <div class="glazing_slider wrap">
+        <div class="glazing_slider">
           <div class="glazing_block text-center wow fadeInUp">
             <img src="img/glazing/icons/1.png" alt="#">
             <a class="tree_link active">Деревянное <br>остекление</a>
@@ -835,19 +835,19 @@
                 <h3>Выберите форму балкона <br>и укажите размеры</h3>
                <div class="balcon_icons">
                  <a href="#" class="type1">
-                   <img src="img/modal_calc/balkon/ba_01.png" alt="Тип1" class="type1_img"></a>
+                   <img src="img/modal_calc/balkon/ba_01.png" alt="Тип1" class="type1_img balcons_mini"></a>
                  <a href="#" class="type2">
-                   <img src="img/modal_calc/balkon/ba_02.png" alt="Тип2" class="type2_img"></a>
+                   <img src="img/modal_calc/balkon/ba_02.png" alt="Тип2" class="type2_img balcons_mini"></a>
                  <a href="#" class="type3">
-                   <img src="img/modal_calc/balkon/ba_03.png" alt="Тип3" class="type3_img"></a>
+                   <img src="img/modal_calc/balkon/ba_03.png" alt="Тип3" class="type3_img balcons_mini"></a>
                  <a href="#" class="type4"> 
-                   <img src="img/modal_calc/balkon/ba_04.png" alt="Тип4" class="type4_img"></a>
+                   <img src="img/modal_calc/balkon/ba_04.png" alt="Тип4" class="type4_img balcons_mini"></a>
                </div>
                 <div class="big_img text-center">
-                  <img src="img/modal_calc/balkon/type1.png" alt="" id="type1">
-                  <img src="img/modal_calc/balkon/type2.png" alt="" id="type2">
-                  <img src="img/modal_calc/balkon/type3.png" alt="" id="type3">
-                  <img src="img/modal_calc/balkon/type4.png" alt="" id="type4">
+                  <img src="img/modal_calc/balkon/type1.png" class="balcons_big" alt="" id="type1">
+                  <img src="img/modal_calc/balkon/type2.png" class="balcons_big" alt="" id="type2">
+                  <img src="img/modal_calc/balkon/type3.png" class="balcons_big" alt="" id="type3">
+                  <img src="img/modal_calc/balkon/type4.png" class="balcons_big" alt="" id="type4">
                 </div>
                 <input class="form-control" id="width" type="text" placeholder="Ширина" required>
                 <label for="width">мм</label>
@@ -862,7 +862,7 @@
    <div class="popup_calc_profile">
         <div class="popup_dialog">
             <div class="popup_calc_profile_content text-center">
-                <button type="button" class="popup_calc_profile_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_calc_profile_close" id="popup-next_close"><strong>&times;</strong></button>
                  <h2>Калькулятор</h2>
                  <h3>Выберите тип остекления <br>и его профиль</h3>
                  <select class="form-control" name="view" id="view_type">
@@ -874,13 +874,13 @@
                  </select>
                  <img src="img/modal_calc/icon_cold.png" alt="">
                  <label>
-                     <input class="checkbox" type="checkbox" name="checkbox-test">
+                     <input class="checkbox" type="checkbox" name="checkbox-test" id="checkbox_cold">
                      <span class="checkbox-custom" id="cold"></span>
                      <span class="label">Холодное</span>
                  </label>
                  <img src="img/modal_calc/icon_warm.png" alt="">
                  <label>
-                     <input class="checkbox" type="checkbox" name="checkbox-test">
+                     <input class="checkbox" type="checkbox" name="checkbox-test" id="checkbox_warm">
                      <span class="checkbox-custom" id="warm"></span>
                      <span class="label">Теплое</span>
                  </label>
@@ -895,7 +895,7 @@
             <div class="popup_content text-center">
                 <button type="button" class="popup_calc_end_close"><strong>&times;</strong></button>
                 <div class="popup_form">
-                    <form class="form" action="#">
+                    <form class="form form_with_obj" action="#">
                       <h2>Спасибо за обращение! <br>Оставьте свои данные</h2>
                         <input class="form-control form_input" name="user_name" required type="text" placeholder="Введите ваше имя">
                         <input class="form-control form_input" name="user_phone" required type="text" placeholder="Введите телефон">
@@ -983,8 +983,6 @@
             });
         });   
     </script>
-
     <script src="js/bundle.js"></script>
-
   </body>
 </html>

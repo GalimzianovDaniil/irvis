@@ -19,10 +19,32 @@ body {
     opacity: 1;
   }
 }
-
+@keyframes hidePopup {
+  from {
+    opacity: 1;
+  } 
+  to {
+    opacity: 0;
+  }
+}
+.balcons_mini_active{
+  transform: scale(1.1, 1.3);
+}
+.balcons_mini_disable{
+  transform: scale(0);
+}
+.balcons_big {
+  margin: auto;
+}
+.hidePopup {
+  display: none;
+  animation-name: hide;
+  animation-duration: 0.5s;
+}
 .show {
+  display: block;
   animation-name: show;
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
 }
 a:hover {
   text-decoration: none;

@@ -11,7 +11,6 @@ export function tabsGlazzing() {
 
     function showTab(i) {
         tabs[i].classList.add('show');
-        
     }
 
     tabsBtns.forEach(function(item, i){
