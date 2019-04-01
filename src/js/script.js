@@ -6,11 +6,12 @@ import 'nodelist-foreach-polyfill';
 import 'formdata-polyfill';
 
 
-import {popupWindow}  from './parts/popupWindow';
-import {popup}        from './parts/popup';
-import {formsInit}    from './parts/formsInit';
-import {tabsGlazzing} from './parts/tabsGlazzing';
-import {calcPopup}    from './parts/calcPopup';
+import {popupWindow}    from './parts/popupWindow';
+import {popup}          from './parts/popup';
+import {formsInit}      from './parts/formsInit';
+import {tabsGlazzing}   from './parts/tabsGlazzing';
+import {calcPopup}      from './parts/calcPopup';
+import {tabsDecoration} from './parts/tabsDecoration';
 
 window.addEventListener('DOMContentLoaded', function(){
     window.globalObj = {};
@@ -19,4 +20,5 @@ window.addEventListener('DOMContentLoaded', function(){
     formsInit();
     tabsGlazzing();
     calcPopup();
+    tabsDecoration();
 });
