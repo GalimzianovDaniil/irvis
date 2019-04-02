@@ -6,9 +6,12 @@ export function formsInit() {
     }
 
     function formInit(form) {
-        const formInput = form.querySelectorAll('.form-control')[1];
-        let   oldInput  = formInput.value,
+        const formInput    = form.querySelectorAll('.form-control')[1],
+              messageBlock = document.createElement('div');
+        let   oldInput       = formInput.value,
               userDataObject = null;
+              
+        form.appendChild(messageBlock);
 
         formInput.addEventListener('keyup', function(){
             if (/[\D]/.test(this.value)) {
@@ -20,19 +23,18 @@ export function formsInit() {
         });
 
         form.addEventListener('submit', function(event){
-            const messageBlock = document.createElement('div');
-
-            form.appendChild(messageBlock);
             event.preventDefault();
-
 
             if (form.classList.contains('form_with_obj')) {
                 userDataObject = window.globalObj;
             } 
-
+            
             sendData(form, userDataObject)
                 .then(() => messageBlock.textContent = 'Спасибо!')
                 .catch(() => messageBlock.textContent = 'Что-то пошло не так...');
+            setTimeout(function(){
+                messageBlock.textContent = '';
+            }, 5000);
         });
     }
 
